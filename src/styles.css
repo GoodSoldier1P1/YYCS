@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/home/home.component.css';
+@import './app/about/about.component.css';
+@import './app/login/login.component.css';
+@import './app/signup/signup.component.css';
+
+.pt-serif-regular {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .pt-serif-bold {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .pt-serif-regular-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .pt-serif-bold-italic {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
