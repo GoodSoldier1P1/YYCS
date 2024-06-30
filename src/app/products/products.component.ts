@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-products',
   standalone: true,
   imports: [],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  templateUrl: './products.component.html',
+  styleUrl: './products.component.css'
 })
-export class AboutComponent {
-  title = 'about';
+export class ProductsComponent {
+  title = 'products';
   constructor(
     private router: Router,
   ) {}
@@ -18,7 +18,7 @@ export class AboutComponent {
     this.router.navigate(['/'])
   }
 
-  onSubmitProducts() {
-    this.router.navigate(['/product'])
+  onSubmitAbout() {
+    this.router.navigate(['/about'])
   }
 }

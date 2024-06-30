@@ -32,13 +32,27 @@ body {
         text-shadow: 1px 1px rgb(238, 237, 237);
         padding-top: 1em;
         margin: 0 auto;
+        margin-right: 15%;
         font-size: 350%;
     }
 
     #logo {
-        height: 15em;
+        height: 7em;
         width: auto;
         margin-right: auto; /* moves to left */
+    }
+
+    .headlineBtn {
+        padding: 1%;
+        margin: 0 1% 0 1%;
+        background: #46bdff;
+        border-radius: 50%;
+        border-color: rgb(238, 237, 237);
+    }
+
+    .headlineBtn:hover {
+        background-color: #009dff;
+        cursor: pointer;
     }
   
 .wspaceL { 
@@ -53,7 +67,23 @@ body {
 }
   
 .content { 
-    grid-area: content; 
-
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em; 
 }
-  
+
+.tsCups {
+    width: auto;
+    height: auto;
+}
+
+.tsCups:hover {
+    cursor: pointer;
+}
+
+#tcss {
+    font-size: 70%;
+}

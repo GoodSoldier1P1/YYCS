@@ -1,0 +1,24 @@
+.container {  display: grid;
+    grid-template-columns: 0.2fr 1.8fr 1.8fr 0.2fr;
+    grid-template-rows: 1fr 1fr 1fr 1.8fr 0.2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header header"
+      "wspaceL content content wspaceR"
+      "wspaceL content content wspaceR"
+      "wspaceL content content wspaceR"
+      "wspaceL footer footer wspaceR";
+  }
+  
+  .header { grid-area: header; }
+  
+  .wspaceL { grid-area: wspaceL; }
+  
+  .wspaceR { grid-area: wspaceR; }
+  
+  .footer { grid-area: footer; }
+  
+  .content { grid-area: content; }
+  
