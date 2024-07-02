@@ -80,6 +80,10 @@
     width: auto;
 }
 
+#cow, #kc, #tree, #TwistedMan {
+    border: 1px solid rgb(238, 237, 237);
+}
+
 #cow:hover, #kc:hover, #tree:hover, #TwistedMan:hover {
     cursor: pointer;
 }

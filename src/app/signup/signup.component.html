@@ -1,7 +1,26 @@
-<div class="signup-container">
-    <form (submit)="onSignup(form)" #form="ngForm">
-      <input type="email" name="email" ngModel placeholder="Email" required>
-      <input type="password" name="password" ngModel placeholder="Password" required>
-      <button type="submit">Signup</button>
-    </form>
+<div class="container">
+  <div class="header">
+    <img id="logo" src="logo.jpg" alt="Yay-Yay's Custom Creations">
+    <h1 id="headline">Create an Account</h1>
   </div>
+
+  <div class="wspaceL"></div>
+  <div class="wspaceR"></div>
+
+  <div class="content">
+    <form (submit)="onSignup(form)" #form="ngForm">
+      <input type="email" name="email" ngModel placeholder="Email" required id="email">
+      <input type="password" name="password" ngModel placeholder="Password" required id="password">
+      <button type="submit" id="submitBtn">Signup</button>
+    </form> <br>
+    <div>
+      <p>Already have an account? Login <a (click)="loginClick" href="/login">Here!</a></p>
+    </div>
+    <div class="imgContainer">
+      <img src="Cow.jpg" alt="Cow Mousepad" id="cow">
+      </div>
+  </div>
+</div>
+
+<div class="footer">
+</div>

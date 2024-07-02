@@ -6,3 +6,83 @@ body {
     background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 0.2fr 1.8fr 1.8fr 0.2fr;
+    grid-template-rows: 1fr 1fr 1fr 1.8fr 0.2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header header"
+        "wspaceL content content wspaceR"
+        "wspaceL content content wspaceR"
+        "wspaceL content content wspaceR"
+        "wspaceL footer footer wspaceR";
+}
+
+.header {
+    grid-area: header;
+    margin: 0;
+    padding: 0;
+}
+
+#headline {
+    text-shadow: 1px 1px rgb(238, 237, 237);
+    padding-top: 1em;
+    margin: 0 auto;
+    margin-right: 30%;
+    font-size: 350%;
+}
+
+#logo {
+    height: 7em;
+    width: auto;
+    margin-right: auto;
+    /* moves to left */
+}
+
+.wspaceL {
+    grid-area: wspaceL;
+}
+
+.wspaceR {
+    grid-area: wspaceR;
+}
+
+.footer {
+    grid-area: footer;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+#email,
+#password {
+    padding: 0.5em;
+    margin: 0.35em;
+}
+
+#submitBtn {
+    border-radius: 50%;
+    padding: 0.5em;
+    background-color: #46bdff;
+    border-color: rgb(238, 237, 237);
+}
+
+/* #cow {
+    width: auto;
+    height: 25em;
+    margin-top: 5em;
+} */
