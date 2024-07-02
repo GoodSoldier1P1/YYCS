@@ -3,6 +3,7 @@
 @import './app/about/about.component.css';
 @import './app/login/login.component.css';
 @import './app/signup/signup.component.css';
+/* @import '~bootstrap/dist/css/bootstrap.css'; */
 
 .pt-serif-regular {
     font-family: "PT Serif", serif;

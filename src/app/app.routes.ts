@@ -5,14 +5,15 @@ import { AboutComponent } from './about/about.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
+import { AuthGuard } from './auth.guard';
 
 
 export const routes: Routes = [
     { path: '', component: HomeComponent},
     { path: 'about', component: AboutComponent},
-    { path: 'signup', component: SignupComponent},
+    { path: 'product', component: ProductsComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent},
-    { path: 'product', component: ProductsComponent},
+    { path: 'signup', component: SignupComponent},
 ];
 
 @NgModule({
