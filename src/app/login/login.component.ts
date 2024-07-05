@@ -17,6 +17,7 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router,
   ) {}
+  ngOnInit(): void{}
 
   onLogin(form: NgForm) {
     if (form.invalid) {

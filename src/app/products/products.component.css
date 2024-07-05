@@ -1,24 +1,85 @@
-.container {  display: grid;
-    grid-template-columns: 0.2fr 1.8fr 1.8fr 0.2fr;
-    grid-template-rows: 1fr 1fr 1fr 1.8fr 0.2fr;
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header header"
-      "wspaceL content content wspaceR"
-      "wspaceL content content wspaceR"
-      "wspaceL content content wspaceR"
-      "wspaceL footer footer wspaceR";
-  }
-  
-  .header { grid-area: header; }
-  
-  .wspaceL { grid-area: wspaceL; }
-  
-  .wspaceR { grid-area: wspaceR; }
-  
-  .footer { grid-area: footer; }
-  
-  .content { grid-area: content; }
-  
+.container {
+  display: grid;
+  grid-template-columns: 0.2fr 1.8fr 1.8fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr 1.8fr 0.2fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header"
+    "wspaceL content content wspaceR"
+    "wspaceL content content wspaceR"
+    "wspaceL content content wspaceR"
+    "wspaceL footer footer wspaceR";
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+#headline {
+  text-shadow: 1px 1px rgb(238, 237, 237);
+  padding-top: 1em;
+  margin: 0 auto;
+  font-size: 350%;
+}
+
+#logo {
+  height: 7em;
+  width: auto;
+  margin-right: auto;
+  /* moves to left */
+}
+
+.wspaceL {
+  grid-area: wspaceL;
+}
+
+.wspaceR {
+  grid-area: wspaceR;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 2% auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #009dff;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}

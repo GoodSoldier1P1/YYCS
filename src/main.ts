@@ -4,17 +4,27 @@ import { AppComponent } from './app/app.component';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { provideAuth, getAuth } from '@angular/fire/auth';
-import { routes } from './app/app.routes';
 import { environment } from './environments/environment';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth, browserLocalPersistence, setPersistence } from '@angular/fire/auth';
+import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-      provideAuth(() => getAuth())
-    
+    provideAuth(() => {
+      const auth = getAuth();
+      setPersistence(auth, browserLocalPersistence)
+        .then(() => {
+          return auth;
+        })
+        .catch((error) => {
+          console.error('Failed to set persistence: ', error);
+          return auth;
+        });
+      return auth;
+    })
   ]
 }).catch(err => console.error(err));

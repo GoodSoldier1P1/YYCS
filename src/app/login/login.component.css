@@ -6,3 +6,8 @@ body {
     background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+#cow2 {
+    width: auto;
+    height: 25em;
+}

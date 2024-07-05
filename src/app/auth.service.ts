@@ -10,7 +10,10 @@ import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signO
 export class AuthService {
   private authStatusListener = new BehaviorSubject<boolean>(false);
 
-  constructor(private auth: Auth, private router: Router) {}
+  constructor(
+    private auth: Auth,
+    private router: Router,
+  ) { }
 
   getAuthStatusListener() {
     return this.authStatusListener.asObservable();
