@@ -8,6 +8,8 @@ import { environment } from './environments/environment';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth, browserLocalPersistence, setPersistence } from '@angular/fire/auth';
 import { routes } from './app/app.routes';
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -25,6 +27,8 @@ bootstrapApplication(AppComponent, {
           return auth;
         });
       return auth;
-    })
-  ]
+    }),
+    importProvidersFrom(MatDialogModule),
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }, provideAnimationsAsync('noop'),
+  ],
 }).catch(err => console.error(err));

@@ -15,35 +15,18 @@
     </div>
 
     <div class="content">
-        <div class="card">
-            <img src="DadTough1.jpg" alt="Dad T-Shirt Design" style="width:100%">
-            <h1>Custom T-Shirt</h1>
-            <p class="price">$19.99</p>
-            <p>A custom design to make an ordinary gift extraordinary.</p>
-            <p><button>Add to Cart</button></p>
+
+        <div *ngFor="let product of products" class="product-card">
+            <div class="card">
+                <img src="{{ product.imageUrl }}" alt="{{ product.name }}" style="width:100%">
+                <h2>{{ product.name }}</h2>
+                <p class="price">$6.99</p>
+                <p>A custom design to make an ordinary gift extraordinary.</p>
+                <p><button (click)="openProductDetail(product)">More Info</button></p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <img src="Cow.jpg" alt="Cow Mousepad Design" style="width:100%">
-            <h1>Custom MousePad</h1>
-            <p class="price">$9.99</p>
-            <p>A custom design to make an ordinary gift extraordinary.</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="Keychains.jpg" alt="Keychain Designs" style="width:100%">
-            <h1>Custom KeyChains</h1>
-            <p class="price">$2.99</p>
-            <p>A custom design to make an ordinary gift extraordinary.</p>
-            <p><button>Add to Cart</button></p>
-        </div>
-        <div class="card">
-            <img src="Tree.jpg" alt="Wind Spinner Design" style="width:100%">
-            <h1>Custom Wind Spinner</h1>
-            <p class="price">$6.99</p>
-            <p>A custom design to make an ordinary gift extraordinary.</p>
-            <p><button>Add to Cart</button></p>
-        </div>
     </div>
 
 </div>

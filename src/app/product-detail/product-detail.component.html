@@ -1,0 +1,10 @@
+<div class="productDetails">
+    <button mat-button (click)="onNoClick()" class="closeBtn">X</button>
+    <h1 mat-dialog-title>{{ data.name }}</h1>
+    <div mat-dialog-content>
+        <p>{{ data.description }}</p>
+    </div>
+    <img [src]="data.imageUrl" alt="{{ data.name }}" class="productImg">
+    <div mat-dialog-actions>
+    </div>
+</div>
