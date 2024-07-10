@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="navbar-logo">
+        <img src="logo.jpg" alt="YYCS" id="navLogo" />
+    </div>
+    <div>
+        <button (click)="homeClick()" class="navRoutes">Home</button>
+        <button (click)="aboutClick()" class="navRoutes">About</button>
+        <button (click)="productsClick()" class="navRoutes">Products</button>
+    </div>
+    <div class="navbar-actions">
+        <div>
+            <button class="navAuth" (click)="onLogin()">Login</button>
+            <button class="navAuth" (click)="onSignup()">Signup</button>
+        </div>
+    </div>
+</nav>
