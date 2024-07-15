@@ -1,5 +1,6 @@
 <div class="container">
     <div class="header">
+        <h1 class="headline">Our Custom Creations</h1>
     </div>
 
     <div class="wspaceL"></div>
@@ -14,10 +15,10 @@
 
         <div *ngFor="let product of products" class="product-card">
             <div class="card">
-                <img src="{{ product.imageUrl }}" alt="{{ product.name }}" style="width:100%">
+                <img src="{{ product.imageUrl }}" alt="{{ product.name }}" style="width:100%" class="cardImg">
                 <h2>{{ product.name }}</h2>
-                <p class="price">$6.99</p>
-                <p>A custom design to make an ordinary gift extraordinary.</p>
+                <p class="price">${{ product.price }}</p>
+                <!-- <p>A custom design to make an ordinary gift extraordinary.</p> -->
                 <p><button (click)="openProductDetail(product)">More Info</button></p>
             </div>
 
