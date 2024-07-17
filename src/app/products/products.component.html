@@ -13,7 +13,7 @@
 
     <div class="content">
 
-        <div *ngFor="let product of products" class="product-card">
+        <div *ngFor="let product of products" class="product-card" (click)="openProductDetail(product)">
             <div class="card">
                 <img src="{{ product.imageUrl }}" alt="{{ product.name }}" style="width:100%" class="cardImg">
                 <h2>{{ product.name }}</h2>

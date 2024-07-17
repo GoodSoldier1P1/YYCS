@@ -29,6 +29,6 @@ bootstrapApplication(AppComponent, {
       return auth;
     }),
     importProvidersFrom(MatDialogModule),
-    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }, provideAnimationsAsync('noop'),
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }, provideAnimationsAsync('noop'),
   ],
 }).catch(err => console.error(err));
