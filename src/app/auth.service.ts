@@ -6,29 +6,41 @@ import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signO
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { MatDialog } from '@angular/material/dialog';
 import { onAuthStateChanged } from 'firebase/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  user: any = null;
+  user: any;
   private authStatusListener = new BehaviorSubject<boolean>(false);
 
   constructor(
     private auth: Auth,
     private router: Router,
     private dialog: MatDialog,
-  ) { this.initializeAuthState(); }
+    // private afAuth: AngularFireAuth,
+  ) {
+    this.initializeAuthState();
+    onAuthStateChanged(this.auth, (user) => {
+      this.user = user;
+      if (user) {
+        this.authStatusListener.next(true);
+        this.router.navigate(['/product'])
+      } else {
+        this.authStatusListener.next(false);
+        this.router.navigate(['/login'])
+      }
+    })
+  }
 
   private initializeAuthState() {
     onAuthStateChanged(this.auth, (user) => {
       if (user) {
         this.user = user;
-        this.authStatusListener.next(true);
       } else {
         this.user = null;
-        this.authStatusListener.next(false);
       }
     });
   }

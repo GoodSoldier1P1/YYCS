@@ -4,8 +4,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 10% 10% 10%;
-    box-shadow: 0 4px 8px 0 rgb(238, 237, 237), 0 6px 20px 0 rgb(238, 237, 237);
+    padding: 0 15% 15% 15%;
+    margin: 0;
+    border: 2px solid rgb(238, 237, 237);
+}
+
+#proName {
+    text-shadow: 1px 1px rgb(238, 237, 237);
+    font-size: xx-large;
+}
+
+#proDesc {
+    text-shadow: 1px 1px rgb(238, 237, 237);
+    font-size: larger;
+    text-align: center;
+    line-height: 1.6;
 
 }
 

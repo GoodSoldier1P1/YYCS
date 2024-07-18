@@ -8,13 +8,15 @@ import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+  ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
   title = 'products';
-  
+
   products = [
     {
       name: 'T-Shirts',
@@ -125,7 +127,11 @@ export class ProductsComponent {
     private router: Router,
     private productModalService: ProductModalService,
     private authService: AuthService,
-  ) {}
+  ) { }
+
+  get isLoggedIn() {
+    return !!this.authService.user;
+  }
 
   onSubmitHome() {
     this.router.navigate(['/'])

@@ -1,7 +1,7 @@
 <div class="productDetails">
     <button mat-button (click)="onNoClick()" class="closeBtn">X</button>
-    <h1 mat-dialog-title>{{ data.name }}</h1>
-    <div mat-dialog-content>
+    <h1 mat-dialog-title id="proName">{{ data.name }}</h1>
+    <div mat-dialog-content id="proDesc">
         <p>{{ data.description }}</p>
     </div>
     <img [src]="data.imageUrl" alt="{{ data.name }}" class="productImg">
