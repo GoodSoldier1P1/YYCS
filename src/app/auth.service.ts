@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from '@angular/fire/auth';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from '@angular/fire/auth';
 import { MatDialog } from '@angular/material/dialog';
-import { onAuthStateChanged } from 'firebase/auth';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @Injectable({
   providedIn: 'root'
@@ -19,28 +16,23 @@ export class AuthService {
   constructor(
     private auth: Auth,
     private router: Router,
-    private dialog: MatDialog,
-    // private afAuth: AngularFireAuth,
+    private dialog: MatDialog
   ) {
     this.initializeAuthState();
-    onAuthStateChanged(this.auth, (user) => {
-      this.user = user;
-      if (user) {
-        this.authStatusListener.next(true);
-        this.router.navigate(['/product'])
-      } else {
-        this.authStatusListener.next(false);
-        this.router.navigate(['/login'])
-      }
-    })
   }
 
   private initializeAuthState() {
     onAuthStateChanged(this.auth, (user) => {
       if (user) {
         this.user = user;
+        this.authStatusListener.next(true);
+        this.router.navigate(['/product']);
+        console.log('auth.service Line 30 If statement',user)
       } else {
         this.user = null;
+        this.authStatusListener.next(false);
+        this.router.navigate(['/login']);
+        console.log('auth.service.ts Line 35 Else statement', user)
       }
     });
   }
@@ -49,21 +41,28 @@ export class AuthService {
     return this.authStatusListener.asObservable();
   }
 
+  isAuthenticated(): boolean {
+    return !!this.user;
+  }
+
   async signup(email: string, password: string) {
     await createUserWithEmailAndPassword(this.auth, email, password);
     this.router.navigate(['/login']);
+    console.log('User Signup Successful')
   }
 
   async login(email: string, password: string) {
     await signInWithEmailAndPassword(this.auth, email, password);
     this.authStatusListener.next(true);
     this.router.navigate(['/']);
+    console.log('User Signed in');
   }
 
   async logout() {
     await signOut(this.auth);
     this.authStatusListener.next(false);
     this.router.navigate(['/login']);
+    console.log('User No Longer Signed In')
   }
 
   openProductModal(product: any): void {
