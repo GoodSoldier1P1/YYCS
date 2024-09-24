@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 0.2fr 1.8fr 1.8fr 0.2fr;
-  grid-template-rows: 0.2fr 1fr 1fr 1.8fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1.8fr 0.1fr;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -32,16 +32,21 @@
   /* moves to left */
 }
 
-.wspaceL {
+.wspaceLProduct {
   grid-area: wspaceL;
 }
 
-.wspaceR {
+.wspaceRProduct {
   grid-area: wspaceR;
 }
 
-.footer {
+.footerProduct {
   grid-area: footer;
+  margin: 0;
+  padding: 0;
+  border-top: 5px solid black;
+  border-radius: 20%;
+  /* border: 1px solid black; */
 }
 
 .content {
@@ -109,10 +114,10 @@
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "header"
-    "content"
-    "footer"
+    grid-template-areas:
+      "header"
+      "content"
+      "footer"
     ;
   }
 

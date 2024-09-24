@@ -32,7 +32,7 @@ export class AuthService {
         this.user = null;
         this.authStatusListener.next(false);
         this.router.navigate(['/login']);
-        console.log('auth.service.ts Line 35 Else statement', user)
+        console.log('auth.service Line 35 Else statement', user)
       }
     });
   }

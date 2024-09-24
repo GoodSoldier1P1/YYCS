@@ -97,6 +97,7 @@ export class ProductsComponent {
     {
       name: 'Can Koozie',
       description: 'Keep your drinks cold and your hands dry with our custom can koozies. Perfect for parties, picnics, or just relaxing at home, these koozies feature personalized designs that stand out.',
+      imageUrl: 'koozies2.png',
       price: '3.99'
     },
     {
