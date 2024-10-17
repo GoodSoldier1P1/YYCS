@@ -4,6 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { ProductModalService } from '../product-modal.service';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../auth.service';
+import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 @Component({
   selector: 'app-products',
@@ -27,7 +28,7 @@ export class ProductsComponent {
     {
       name: 'Toddler Clothes',
       description: 'Dress your little one in style with our custom sublimated toddler clothes. Soft, comfortable, and adorned with vibrant, long-lasting designs, these outfits are perfect for playtime or special occasions.',
-      imageUrl: '',
+      imageUrl: 'ToddlerShirt.png',
       price: '9.99'
     },
     {
@@ -57,41 +58,49 @@ export class ProductsComponent {
     {
       name: 'Lanyard',
       description: 'Keep your keys, ID, or badges secure and stylish with our custom lanyards. Made from high-quality materials, these lanyards feature vibrant, fade-resistant designs that make a statement.',
+      imageUrl: 'lanyard.png',
       price: '2.99'
     },
     {
       name: 'Water Bottles',
       description: 'Quench your thirst with our personalized water bottles. Crafted for durability and designed for style, these bottles are perfect for the gym, office, or on-the-go hydration.',
+      imageUrl: 'WaterBottle.png',
       price: '14.99'
     },
     {
       name: 'Make-up Bags',
       description: 'Organize your cosmetics in a chic and personalized way with our custom makeup bags. Spacious and durable, these bags feature vibrant designs that make them as stylish as they are functional.',
+      imageUrl: 'MakeupBag.png',
       price: '9.99'
     },
     {
       name: 'Earrings',
       description: 'Add a personal touch to your jewelry collection with our custom sublimated earrings. Lightweight and comfortable, these earrings feature unique, eye-catching designs that express your individuality.',
+      imageUrl: 'earrings.png',
       price: '2.99'
     },
     {
       name: 'Chapstick Holder',
       description: 'Never lose your lip balm again with our custom chapstick holders. These handy accessories attach easily to your keys or bag, featuring bright and personalized designs to match your style.',
+      imageUrl: 'ChapstickHolder.png',
       price: '1.99'
     },
     {
       name: 'Phone Cases',
       description: 'Protect your phone with our custom sublimated cases. Durable and stylish, these cases feature high-resolution designs that won\'t fade, ensuring your phone looks great while staying safe.',
+      imageUrl: 'phonecase.png',
       price: '9.99'
     },
     {
       name: 'Baby Clothes',
       description: 'Dress your baby in adorable, personalized outfits with our custom sublimated baby clothes. Soft and gentle on delicate skin, these clothes feature vibrant designs that make them perfect for any occasion.',
+      imageUrl: 'babyclothes.png',
       price: '9.99'
     },
     {
       name: 'Pillow Cases',
       description: 'Add a touch of personality to your home decor with our custom sublimated pillow cases. Made from soft, durable fabric, these pillow cases showcase your unique designs in vivid detail.',
+      imageUrl: 'pillowcase.png',
       price: '8.99'
     },
     {
@@ -103,17 +112,19 @@ export class ProductsComponent {
     {
       name: 'Mugs',
       description: 'Start your day with a smile and a custom sublimated mug. Whether it\'s coffee, tea, or cocoa, these mugs feature vibrant designs that make every sip special.',
+      imageUrl: 'mug.png',
       price: '7.99'
     },
     {
       name: 'Coasters',
       description: 'Protect your surfaces in style with our custom sublimated coasters. Durable and absorbent, these coasters feature unique designs that add a personal touch to any space.',
+      imageUrl: 'coaster.png',
       price: '6.99'
     },
     {
       name: 'Stickers',
       description: 'Express yourself with our custom sublimated stickers. Perfect for laptops, notebooks, or any flat surface, these stickers are made from high-quality materials and feature vibrant, lasting designs.',
-      imageUrl: '',
+      imageUrl: 'sticker.png',
       price: '4.99'
     },
     {

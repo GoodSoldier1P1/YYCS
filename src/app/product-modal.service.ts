@@ -11,8 +11,17 @@ export class ProductModalService {
 
   openProductDetail(product: any): void {
     this.dialog.open(ProductDetailComponent, {
-      data: product,
-      width: '500px'
-    })
+      width: '500px',
+      data: {
+        name: product.name,
+        description: product.description,
+        imageUrl: product.imageUrl,
+        price: product.price
+      },
+      panelClass: 'custom-modal',
+      disableClose: false,
+      autoFocus: false,
+      restoreFocus: false,
+    });
   }
 }

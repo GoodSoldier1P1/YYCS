@@ -7,6 +7,17 @@
     padding: 0 15% 15% 15%;
     margin: 0;
     border: 2px solid rgb(238, 237, 237);
+
+    max-height: 120vh;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    .custom-modal .mat-dialog-container {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+    }
 }
 
 #proName {
@@ -23,6 +34,7 @@
 }
 
 .productImg {
+    margin-bottom: 10%;
     width: 100%;
     height: auto;
     box-shadow: 0 4px 8px 0 rgb(238, 237, 237), 0 6px 20px 0 rgb(238, 237, 237);
@@ -37,3 +49,9 @@
     padding: 3%;
     /* margin-right: 2%; */
 }
+
+.OrderBtn {
+    margin: 20%;
+    padding: 1%;
+}
+
