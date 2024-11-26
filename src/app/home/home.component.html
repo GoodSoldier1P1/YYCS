@@ -8,15 +8,88 @@
     <div class="wspaceR"></div>
 
     <div class="footer">
-    
+
     </div>
 
     <div class="content">
-        <img src="TS_Cups.jpg" alt="Twisted Stache Cup Designs" 
+        <!-- <img src="TS_Cups.jpg" alt="Twisted Stache Cup Designs" 
             class="tsCups" (click)="onSubmitProducts()">
         <p id="tcss">*These products were made for The Twisted Stache Coffee and Creamery (TSCC).
             The logo's used are under ownership of TSCC.
-        </p>
+        </p> -->
+
+        <!-- Full Width Images with number text -->
+        <div class="mySlides">
+            <div class="numberText">1 / 6</div>
+            <img src="TS_Cups.jpg" alt="Twisted Stache Tumblers" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numberText">2 / 6</div>
+            <img src="koozies2.png" alt="Can Koozies" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numberText">3 / 6</div>
+            <img src="Keychains.png" alt="Keychains" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numberText">4 / 6</div>
+            <img src="Tree.png" alt="Tree Design Wind Spinner" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numberText">5 / 6</div>
+            <img src="Cow.png" alt="Highland Cow Mouse Pad" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numberText">6 / 6</div>
+            <img src="Canvases.png" alt="Personalized Canvas Images" style="width: 100%;">
+        </div>
+
+        <!-- Next and Previous Buttons -->
+        <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+        <a class="next" (click)="plusSlides(1)">&#10095;</a>
+
+        <!-- Image Text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="TS_Cups.jpg" style="width: 100%;" (click)="currentSlide(1)"
+                    alt="Twisted Stache Cups">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="koozies2.png" style="width: 100%;" (click)="currentSlide(2)"
+                    alt="Can Koozies">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="Keychains.png" style="width: 100%;" (click)="currentSlide(3)"
+                    alt="Keychains">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="Tree.png" style="width: 100%;" (click)="currentSlide(4)"
+                    alt="Tree Design Wind Spinner">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="Cow.png" style="width: 100%;" (click)="currentSlide(5)"
+                    alt="Highland Cow Mousepad">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="Canvases.png" style="width: 100%;" (click)="currentSlide(6)"
+                    alt="Personalized Canvas Images">
+            </div>
+        </div>
     </div>
 
-  </div>
+</div>
